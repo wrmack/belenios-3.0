@@ -1,0 +1,3 @@
+(library
+ (name belenios_server_module)
+ (libraries belenios_server))

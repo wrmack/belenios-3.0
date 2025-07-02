@@ -1,0 +1,82 @@
+(install
+ (files
+  (glob_files
+   (*.png with_prefix static))
+  (glob_files
+   (*.css with_prefix static))
+  (glob_files
+   (*.js with_prefix static)))
+ (section share)
+ (package belenios-server))
+
+(rule
+ (target tool_js.js)
+ (deps ../clients/tool/tool_js.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))
+
+(rule
+ (target tool_js_fingerprint.js)
+ (deps ../clients/tool/tool_js_fingerprint.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))
+
+(rule
+ (target admin_basic.js)
+ (deps ../clients/basic/admin_basic.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))
+
+(rule
+ (target admin.js)
+ (deps ../clients/admin/admin.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))
+
+(rule
+ (target belenios_jslib.js)
+ (deps ../clients/jslib/belenios_jslib.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))
+
+(rule
+ (target belenios_worker.js)
+ (deps ../clients/worker/belenios_worker.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))
+
+(rule
+ (target trustee.js)
+ (deps ../clients/trustee/trustee.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))
+
+(rule
+ (target credauth.js)
+ (deps ../clients/credauth/credauth.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))
+
+(rule
+ (target election.js)
+ (deps ../clients/election/main.bc.js)
+ (action
+  (with-stdout-to
+   %{target}
+   (run ./wrap_tool.sh %{deps}))))

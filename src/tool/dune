@@ -1,0 +1,11 @@
+(executable
+ (name main)
+ (public_name belenios-tool)
+ (package belenios-tool)
+ (libraries
+  str
+  cmdliner
+  cohttp-lwt-unix
+  belenios-platform-native
+  belenios-lib
+  belenios-lib.api))

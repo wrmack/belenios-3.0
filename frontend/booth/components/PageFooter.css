@@ -1,0 +1,19 @@
+.page-footer {
+  border-radius: 0 0 10px 10px;
+  background: var(--footer-background);
+  color: var(--footer-font);
+  text-align: center;
+  padding: 5px 2px;
+  line-height: 1.5em;
+  font-size: 12px;
+  min-height: 8px;
+}
+
+.page-footer a {
+  color: var(--footer-link-font);
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
+}

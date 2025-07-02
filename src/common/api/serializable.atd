@@ -1,0 +1,346 @@
+(**************************************************************************)
+(*                                BELENIOS                                *)
+(*                                                                        *)
+(*  Copyright © 2012-2023 Inria                                           *)
+(*                                                                        *)
+(*  This program is free software: you can redistribute it and/or modify  *)
+(*  it under the terms of the GNU Affero General Public License as        *)
+(*  published by the Free Software Foundation, either version 3 of the    *)
+(*  License, or (at your option) any later version, with the additional   *)
+(*  exemption that compiling, linking, and/or using OpenSSL is allowed.   *)
+(*                                                                        *)
+(*  This program is distributed in the hope that it will be useful, but   *)
+(*  WITHOUT ANY WARRANTY; without even the implied warranty of            *)
+(*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU     *)
+(*  Affero General Public License for more details.                       *)
+(*                                                                        *)
+(*  You should have received a copy of the GNU Affero General Public      *)
+(*  License along with this program.  If not, see                         *)
+(*  <http://www.gnu.org/licenses/>.                                       *)
+(**************************************************************************)
+
+<doc text="API-specific serializable datatypes">
+
+type uuid = string wrap <ocaml module="Belenios_core.Common_types.Uuid">
+type hash = string wrap <ocaml module="Belenios_core.Common_types.Hash">
+type weight = abstract wrap <ocaml module="Belenios_core.Common_types.Weight">
+type 'a template <ocaml predef from="Belenios_core.Serializable"> = abstract
+
+type cast_error <ocaml predef from="Belenios_core.Serializable"> = abstract
+type context <ocaml predef from="Belenios_core.Serializable"> = abstract
+type ('a, 'b) trustee_public_key <ocaml predef from="Belenios_core.Serializable"> = abstract
+type 'a cert <ocaml predef from="Belenios_core.Serializable"> = abstract
+type 'a vinput <ocaml predef from="Belenios_core.Serializable"> = abstract
+type ('a, 'b) voutput <ocaml predef from="Belenios_core.Serializable"> = abstract
+type ('a, 'b) trustees <ocaml predef from="Belenios_core.Serializable"> = abstract
+
+type restricted_mode_error =
+  [ AutoCredentials
+  | VoterAuthentication
+  | ForbiddenQuestions
+  | NotEnoughTrustees
+  | NoThreshold
+  | HasWeights
+  | BadGroup
+  ]
+
+type validation_error =
+  [ NoTitle
+  | NoQuestions
+  | NoAdministrator
+  | NoCredentialAuthority
+  | NoVoters
+  | TooManyVoters
+  | MissingPasswords
+  | MissingPublicCredentials
+  | TrusteesNotReady
+  | WeightsAreIncompatibleWithNH
+  | NotSinglePrivateKey
+  | KeyEstablishmentNotFinished
+  | MissingBilling of string
+  | RestrictedMode of restricted_mode_error
+  ]
+
+type error =
+  [ GenericError of string
+  | NotInExpectedState
+  | CannotChange of string
+  | Invalid of string
+  | Unsupported of string
+  | Missing of string
+  | MissingVoter of string
+  | ValidationError of validation_error
+  | InvalidPublicKey
+  | PublicKeyExists
+  | CastError of cast_error
+  ]
+
+type request_status = {
+    code : int;
+    status : string;
+    error : error;
+}
+
+type configured_authentication = {
+    instance : string;
+    system : string;
+} <ocaml field_prefix="configured_">
+
+type authentication_system =
+  [ Password
+  | CAS
+  | Configured of configured_authentication
+  ]
+
+type configuration_uris = {
+    home : string;
+    logo : string;
+    belenios : string;
+    source_code : string;
+    tos : string;
+}
+
+type configuration = {
+    restricted_mode : bool;
+    vendor : string;
+    tos_last_update : float;
+    uris : configuration_uris;
+    belenios_version : string;
+    belenios_build : string;
+    spec_version : string;
+    api_version : int;
+    supported_crypto_versions : int list;
+    supported_booth_versions : int list;
+    authentications : authentication_system list;
+    default_group : string;
+    default_nh_group : string;
+    max_voters : int;
+    languages : (string * string) list <json repr="object">;
+}
+
+type api_account = {
+    id : int;
+    name : string;
+    ?address : string option;
+    ?language : string option;
+    default_voter_languages : string list;
+    default_contact : string;
+}
+
+type authentication =
+  [ Password
+  | CAS of string
+  | Configured of string
+  ]
+
+type 'a draft = {
+    version : int;
+    owners : int list;
+    questions : 'a template;
+    languages : string list;
+    ?contact : string option;
+    booth : int;
+    authentication : authentication;
+    group : string;
+} <ocaml field_prefix="draft_">
+
+type ('a, 'b) pedersen = {
+    context : context;
+    step : int;
+    certs : 'b cert list <ocaml repr="array">;
+    ?vinput : 'b vinput option;
+    ?voutput : ('a, 'b) voutput option;
+} <ocaml field_prefix="pedersen_">
+
+type trustee_status_basic =
+ [ Init
+ | Done
+ ]
+
+type ('a, 'b) trustee_status_threshold =
+ [ Init
+ | WaitingForCertificate of context
+ | WaitingForOtherCertificates
+ | Pedersen of ('a, 'b) pedersen
+ ]
+
+type ('a, 'b) trustee_status =
+  [ Basic of trustee_status_basic
+  | Threshold of ('a, 'b) trustee_status_threshold
+  ]
+
+type state =
+  [ Draft
+  | Open
+  | Closed
+  | Shuffling
+  | EncryptedTally
+  | Tallied
+  | Archived
+  ]
+
+type summary = {
+    uuid : uuid;
+    name : string;
+    date : float;
+    state : state;
+}
+
+type summary_list = summary list
+
+type voter_list <ocaml predef from="Belenios_core.Serializable"> = abstract
+
+type string_list = string list
+
+type public_credentials = string list
+type private_credentials <ocaml predef from="Belenios_core.Serializable"> = abstract
+
+type 'a trustee = {
+    ?address : string option;
+    name : string;
+    ?token : string option;
+    ?state : int option;
+    ?key : 'a option;
+} <ocaml field_prefix="trustee_">
+
+type ('a, 'b) basic_trustees = {
+    trustees : ('a, 'b) trustee_public_key trustee list;
+} <ocaml field_prefix="bt_">
+
+type 'a threshold_trustees = {
+    ?threshold : int option;
+    trustees : 'a cert trustee list;
+} <ocaml field_prefix="tt_">
+
+type ('a, 'b) draft_trustees =
+  [ Basic of ('a, 'b) basic_trustees
+  | Threshold of 'b threshold_trustees
+  ]
+
+type draft_status = {
+    num_voters : int;
+    ?passwords_ready : bool option;
+    credentials_ready : bool;
+    ?credentials_left : int option;
+    ?private_credentials_downloaded : bool option;
+    trustees_ready : bool;
+    nh_and_weights_compatible : bool;
+    credential_authority_visited : bool;
+    voter_authentication_visited : bool;
+    trustees_setup_step : int;
+    ?restricted_mode_error : restricted_mode_error option;
+}
+
+type draft_request =
+  [ SetDownloaded
+  | ValidateElection
+  | SetCredentialAuthorityVisited
+  | SetVoterAuthenticationVisited
+  | SetTrusteesSetupStep of int
+  ]
+
+type trustees_request =
+  [ Add of abstract trustee
+  | Import of uuid
+  | SetBasic
+  | SetThreshold of int
+  ]
+
+type voters_request =
+  [ Import of uuid
+  ]
+
+type election_status = {
+   state : state;
+   ?authentication : authentication option;
+   auto_delete_date : float;
+   ?auto_archive_date : float option;
+} <ocaml field_prefix="status_">
+
+type election_auto_dates = {
+    ?open : float option;
+    ?close : float option;
+    ?publish : float option;
+} <ocaml field_prefix="auto_date_">
+
+type voting_record = {
+    date : float;
+    username : string;
+} <ocaml field_prefix="vr_">
+
+type records = voting_record list
+
+type admin_request =
+  [ Open
+  | Close
+  | ComputeEncryptedTally
+  | FinishShuffling
+  | ReleaseTally
+  | Archive
+  | RegeneratePassword of string
+  ]
+
+type trustee_pd = {
+    address : string;
+    token : string;
+    done : bool;
+} <ocaml field_prefix="trustee_pd_">
+
+type partial_decryptions = {
+    trustees : trustee_pd list;
+    ?threshold : int option;
+} <ocaml field_prefix="partial_decryptions_">
+
+type tally_trustee = {
+    ?private_key : string option;
+} <ocaml field_prefix="tally_trustee_">
+
+type shuffler = {
+    address : string;
+    ?token : string option;
+    ?fingerprint : string option;
+} <ocaml field_prefix="shuffler_">
+
+type shuffles = {
+    shufflers : shuffler list;
+} <ocaml field_prefix="shuffles_">
+
+type shuffler_request =
+  [ Skip
+  | Select
+  ]
+
+type ballots_with_weights = (hash * weight) list <json repr="object">
+
+type billing_context = {
+    email : string;
+    nb_elections : int;
+    total_voters : int;
+}
+
+type billing_request = {
+    admin_id : int;
+    date : float;
+    uuid : uuid;
+    nb_voters : int;
+    ?context : billing_context option;
+}
+
+type client_configuration = {
+    ?consent : float option;
+    ?lang : string option;
+}
+
+type confirmation = {
+    user : string;
+    recipient : string;
+    hash : hash;
+    revote : bool;
+    weight : weight option;
+    email : bool;
+}
+
+type cast_result =
+  [ Ok of confirmation
+  | Error of cast_error
+  ]

@@ -1,0 +1,77 @@
+stages:
+  - test
+
+ocamlformat:
+  stage: test
+  image: glondu/beleniosbase:20240913-1
+  script:
+    # Initialize environment
+    - source ~/env.sh
+    # (Re-)format everything
+    - dune fmt
+
+basic_tests:
+  stage: test
+  # Image glondu/beleniosbase:YYYYMMDD-N is built by contrib/docker/gitlab-ci.Dockerfile
+  image: glondu/beleniosbase:20240913-1
+  script:
+    # Initialize environment
+    - source ~/env.sh
+    # Run command-line tool tests
+    - make check
+    # Compile belenios
+    - make build-release-server
+    # Start belenios web server
+    - ./demo/run-server.sh &
+    # Access the localhost web page, print page output for debug purposes, and check validity of page output
+    - first_access_index_page_output=$(wget --retry-connrefused --no-check-certificate -T 30 http://localhost:8001 -O-)
+    - echo $first_access_index_page_output
+    - if [ "$(echo \"$first_access_index_page_output\" | grep '>Belenios</a>' | wc -l)" != "1" ]; then echo "[First page access] First page access does not show a single '>Belenios</a>' text, but it should" && exit 1; else echo "[First page access] First page access shows a single '>Belenios</a>' text, as expected"; fi
+
+opam-bootstrap:
+  stage: test
+  image: ocaml/opam:debian-12-ocaml-4.14
+  script:
+    # Install required packages
+    - sudo apt-get update -qq && sudo apt-get install -y -qq build-essential libgmp-dev libsodium-dev pkg-config m4 libssl-dev libsqlite3-dev wget ca-certificates unzip libncurses-dev zlib1g-dev jq npm rsync
+    # Install the same Opam packages that opam-bootstrap.sh installs
+    - git -C /home/opam/opam-repository remote set-url origin https://github.com/ocaml/opam-repository.git
+    - git -C /home/opam/opam-repository pull origin master
+    - opam update
+    - opam repository add belenios-overlay $PWD/vendor/opam-overlay
+    - eval `grep "opam install" ./opam-bootstrap.sh`
+    # Compile belenios
+    - make build-debug-tool
+    - make build-release-server
+    # Start belenios web server
+    - ./demo/run-server.sh &
+    # Access the localhost web page, print page output for debug purposes, and check validity of page output
+    - first_access_index_page_output=$(wget --retry-connrefused --no-check-certificate -T 30 http://localhost:8001 -O-)
+    - echo $first_access_index_page_output
+    - if [ "$(echo \"$first_access_index_page_output\" | grep '>Belenios</a>' | wc -l)" != "1" ]; then echo "[First page access] First page access does not show a single '>Belenios</a>' text, but it should" && exit 1; else echo "[First page access] First page access shows a single '>Belenios</a>' text, as expected"; fi
+
+scenarios:
+  stage: test
+  # Image glondu/beleniosbase-tests:YYYYMMDD-N is built by contrib/docker/gitlab-ci.Dockerfile
+  image: glondu/beleniosbase-tests:20240913-1
+  script:
+    # Initialize environment
+    - source ~/env.sh
+    # Compile belenios
+    - make build-debug-tool
+    - make build-release-server
+    # Run the OCaml automated test scenarios
+    - BELENIOS_HEADLESS=1
+      PATH=$PWD/_run/usr/bin:$PATH
+      GIT_AUTHOR_NAME="Continuous Integration"
+      GIT_AUTHOR_EMAIL="ci@example.org"
+      GIT_COMMITTER_NAME="Continuous Integration"
+      GIT_COMMITTER_EMAIL="ci@example.org"
+      dune exec -- tests/webdriver/main.exe
+      run "BELENIOS_SENDMAIL=tests/sendmail_fake.sh exec demo/run-server.sh"
+      tmpdir /tmp
+      run "LC_ALL=C.UTF-8 exec geckodriver --port=4444"
+      scenario local one 5 none charlie email
+      scenario demo two 1 none none password
+      scenario demo one 1 basic none email
+      scenario demo one 1 threshold none email

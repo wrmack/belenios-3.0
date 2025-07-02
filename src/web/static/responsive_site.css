@@ -1,0 +1,63 @@
+@import "../../../vendor/css/style.css";
+@import "../../../vendor/css/superfish.css";
+
+/* UI Components try to respect [BEM](http://getbem.com/naming/) for the naming of their CSS classes */
+@import "../../../frontend/booth/components/PageHeader.css";
+@import "../../../frontend/booth/components/Progress.css";
+@import "../../../frontend/booth/components/PageFooter.css";
+@import "../../../frontend/booth/components/NiceButton.css";
+@import "../../../frontend/booth/components/NiceInput.css";
+@import "../../../frontend/booth/components/common.css";
+
+@import "./common.css";
+@import "./NavMenu.css";
+
+#main {
+  padding: 10px;
+}
+
+body {
+  background: #E5E4E2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  line-height: initial;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    margin: 8px;
+  }
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px; /* leave some space for sticky footer */
+  box-shadow: var(--page-shadow);
+  border-radius: 10px;
+}
+
+.page-body {
+  background: var(--background-light);
+}
+
+.cookie-disclaimer {
+  padding: 10px;
+  margin: 10px;
+}
+
+.sticky-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--background-light);
+  text-align: center;
+  border-top: 1px solid black;
+}

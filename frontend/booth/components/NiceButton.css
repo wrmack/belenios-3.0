@@ -1,0 +1,68 @@
+.nice-button {
+  border: 0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  line-height: initial;
+  box-shadow: var(--button-shadow);
+}
+
+.nice-button:hover {
+  cursor: pointer;
+  box-shadow: var(--button-shadow-hover);
+}
+.nice-button[disabled]:hover {
+  cursor: initial;
+  background: initial;
+}
+
+.nice-button[disabled] {
+  opacity: 0.5;
+}
+
+.nice-button--blue {
+  background: var(--button-blue);
+  color: var(--font-light);
+}
+.nice-button--blue:hover {
+  background: var(--button-blue-hover);
+}
+.nice-button--blue:active {
+  background: var(--button-blue-active);
+}
+
+.nice-button--white {
+  background: var(--button-white);
+  color: var(--font-dark);
+}
+.nice-button--white:hover {
+  background: var(--button-white-hover);
+}
+.nice-button--white:active {
+  background: var(--button-white-active);
+}
+
+.nice-button--grey {
+  background: var(--button-grey);
+  color: var(--font-light);
+}
+.nice-button--grey:hover {
+  background: var(--button-grey-hover);
+}
+.nice-button--grey:active {
+  background: var(--button-grey-active);
+}
+
+.nice-button--default {
+  background: var(--button-default);
+  color: var(--font-dark);
+}
+.nice-button--default:hover {
+  background: var(--button-default-hover);
+}
+.nice-button--default:active {
+  background: var(--button-default-active);
+}

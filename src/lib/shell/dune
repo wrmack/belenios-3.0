@@ -1,0 +1,9 @@
+(library
+ (name belenios)
+ (public_name belenios-lib)
+ (libraries
+  yojson
+  atd
+  belenios-platform
+  belenios-lib.core
+  belenios-lib.v1))

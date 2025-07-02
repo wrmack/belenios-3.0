@@ -1,0 +1,935 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: belenios 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-22 07:39+0000\n"
+"PO-Revision-Date: 2022-02-28 14:55+0000\n"
+"Last-Translator: Stavros Christoforou <stavros.christoforou@gmail.com>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/belenios/voter/el/>"
+"\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.11.1-dev\n"
+
+#: src/web/server/common/pages_common.ml:341
+msgid " (if you forgot it, for example)."
+msgstr " (εάν το ξεχάσατε, για παράδειγμα)."
+
+#: src/web/common/pages_common.ml:249
+msgid " A confirmation e-mail has been sent to you."
+msgstr " Σας έχει σταλεί ένα e-mail επιβεβαίωσης."
+
+#: src/web/common/pages_common.ml:247
+msgid " anytime during the election."
+msgstr " οποιαδήποτε στιγμή κατά την διάρκεια της ψηφοφορίας."
+
+#: src/web/common/pages_common.ml:236
+msgid " as user "
+msgstr ""
+
+#: src/web/clients/election/ballots.ml:59
+msgid " ballot(s) have been accepted so far."
+msgstr " ψήφος(ι) έχουν γίνει αποδεκτές μέχρι τώρα."
+
+#: src/web/clients/election/ballots.ml:69
+msgid " ballot(s) have been accepted, and "
+msgstr " ψήφος(ι) έχουν γίνει αποδεκτές, και "
+
+#: src/web/clients/election/ballots.ml:63
+msgid " ballot(s) have been accepted."
+msgstr " ψήφος(ι) έχουν γίνει αποδεκτές."
+
+#: src/web/clients/election/home.ml:42 src/web/server/common/web_common.ml:45
+msgid " day(s)"
+msgstr " ημέρα(-ες)"
+
+#: src/web/clients/election/home.ml:358
+msgid " for more information."
+msgstr " για περισσότερες πληροφορίες."
+
+#: src/web/common/pages_common.ml:238
+msgid " has been accepted."
+msgstr " έχει γίνει αποδεκτό."
+
+#: src/web/clients/election/ballots.ml:71
+msgid " have been tallied."
+msgstr " έχουν καταμετρηθεί."
+
+#: src/web/clients/election/home.ml:43 src/web/server/common/web_common.ml:47
+msgid " hour(s)"
+msgstr " ώρα(-ες)"
+
+#: src/web/server/common/pages_common.ml:549
+msgid " in the following box: "
+msgstr " στο ακόλουθο πεδίο: "
+
+#: src/web/common/pages_common.ml:255
+msgid " is rejected, because "
+msgstr " απορρίφθηκε, επειδή "
+
+#: src/web/clients/election/home.ml:44 src/web/server/common/web_common.ml:48
+msgid " minute(s)"
+msgstr " λεπτό(-ά)"
+
+#: src/web/server/common/web_common.ml:44
+msgid " month(s)"
+msgstr " μήνας(-ες)"
+
+#: src/web/clients/election/home.ml:45 src/web/server/common/web_common.ml:49
+msgid " second(s)"
+msgstr " δευτερόλεπτο(-α)"
+
+#: src/web/server/common/web_common.ml:43
+msgid " year(s)"
+msgstr " έτος(-η)"
+
+#: src/web/clients/election/home.ml:318 src/web/clients/election/home.ml:285
+msgid "%d blank ballot(s)"
+msgstr ""
+
+#: src/web/clients/election/home.ml:383 src/web/clients/election/home.ml:294
+msgid "%d invalid ballot(s)"
+msgstr "%d άκυρες ψήφοι"
+
+#: src/web/clients/election/home.ml:161
+msgid "%d of the following %d trustees [public keys] are needed to decrypt the election result:"
+msgstr ""
+
+#: src/web/clients/election/home.ml:312 src/web/clients/election/home.ml:279
+msgid "%d valid (non-blank) ballot(s)"
+msgstr ""
+
+#: src/web/clients/election/home.ml:313 src/web/clients/election/home.ml:280
+msgid "%d valid ballot(s)"
+msgstr ""
+
+#: src/web/clients/election/advanced.ml:144
+msgid "(available in the "
+msgstr ""
+
+#: src/web/clients/election/advanced.ml:146
+msgid "), or any compatible booth."
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:337
+msgid ", or "
+msgstr ", ή "
+
+#: src/web/clients/election/home.ml:346
+msgid "A Condorcet winner is a candidate that is preferred over all the other candidates."
+msgstr ""
+"Ένας νικητής τύπου Condorcet είναι ένας υποψήφιος που προτιμήθηκε από όλους "
+"τους άλλους υποψηφίους."
+
+#: src/web/clients/election/home.ml:391
+msgid "A ballot is invalid if two candidates have been given the same preference order or if a rank is missing."
+msgstr ""
+"Μία ψήφος είναι άκυρη εαν δύο υποψήφιοι έχουν την ίδια σειρά προτίμησης ή "
+"εαν ένας βαθμός λείπει."
+
+#: src/web/clients/election/advanced.ml:149
+msgid "A specification of encrypted ballots is also available in the sources."
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:450
+msgid "A verification code has been sent to %s."
+msgstr ""
+
+#: src/web/clients/election/home.ml:222
+msgid "About this election"
+msgstr ""
+
+#: src/web/clients/election/ballots.ml:110
+msgid "Accepted ballots"
+msgstr "Αποδεκτές ψήφοι"
+
+#: src/web/clients/election/home.ml:300
+msgid "According to Majority Judgment, the ranking is:"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:91
+msgid "Administer elections"
+msgstr "Διαχειριστείτε ψηφοφορίες"
+
+#: src/web/clients/election/common.ml:62 src/web/server/common/pages_common.ml:97
+msgid "Administer this election"
+msgstr "Διαχειριστείτε αυτή την ψηφοφορία"
+
+#: src/web/clients/election/home.ml:71
+msgid "Administrator"
+msgstr ""
+
+#: src/web/clients/election/advanced.ml:59 src/web/clients/election/common.ml:58
+msgid "Advanced mode"
+msgstr "Προηγμένη λειτουργία"
+
+#: src/web/clients/election/home.ml:132
+msgid "All of the following trustees (verification keys) are needed to decrypt the result:"
+msgstr ""
+"Όλοι οι κάτωθι ελεγκτές (κλειδιά επιβεβαίωσης) χρειάζονται για να "
+"αποκρυπτογραφήσουν το αποτέλεσμα:"
+
+#: src/web/clients/election/advanced.ml:114
+msgid "Alternatively, you can also upload a file containing your ballot:"
+msgstr ""
+
+#: src/web/server/common/pages_voter.ml:82
+#. src/web/server/common/pages_voter.ml:77
+msgid "Answer to questions"
+msgstr "Απαντήστε στις ερωτήσεις"
+
+#: src/web/clients/election/common.ml:53
+msgid "Audit data: "
+msgstr "Έλεγχος δεδομένων: "
+
+#: src/web/server/common/pages_voter.ml:130
+#. src/web/server/common/pages_voter.ml:125
+#. src/web/server/common/pages_common.ml:474
+#. src/web/server/common/pages_common.ml:405
+#. src/web/server/common/pages_common.ml:314
+msgid "Authenticate"
+msgstr "Αυθεντικοποίηση"
+
+#: src/web/server/common/pages_common.ml:245
+msgid "Authenticate with %s"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:510
+msgid "Authentication"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:419
+msgid "Authentication failed"
+msgstr "Αυθεντικοποίηση απέτυχε"
+
+#: src/web/server/common/pages_common.ml:425
+msgid "Authentication failed, probably because of a bad username or password, or you are not allowed to perform this operation."
+msgstr ""
+"Η αυθεντικοποίηση απέτυχε, πιθανά λόγω λανθασμένου ονόματος χρήστη ή "
+"κωδικού, ή δεν έχετε το δικαίωμα σε αυτή την ενέργεια."
+
+#: src/web/server/common/pages_common.ml:574
+msgid "Authentication impossible"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:569
+msgid "Authentication is impossible."
+msgstr ""
+
+#: src/web/clients/election/advanced.ml:158
+msgid "Back to election home"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:525
+msgid "Bad e-mail address!"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:524
+msgid "Bad security code!"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:503
+msgid "Best regards,"
+msgstr ""
+
+#: src/web/clients/election/home.ml:449
+msgid "Blank vote"
+msgstr "Λευκή ψήφος"
+
+#: src/web/clients/election/advanced.ml:153
+msgid "Booths available on this server:"
+msgstr ""
+
+#: src/web/clients/common/secondary_ui.ml:93
+msgid "By using this site, you accept our "
+msgstr "Με την χρήση αυτής της σελίδας, δέχεστε την "
+
+#: src/web/server/common/pages_common.ml:584
+msgid "Click here"
+msgstr ""
+
+#: src/web/clients/common/secondary_ui.ml:101
+msgid "Close"
+msgstr ""
+
+#: src/web/clients/tool/tool_js_fingerprint.ml:92
+msgid "Compare"
+msgstr "Σύγκριση"
+
+#: src/web/clients/tool/tool_js_fingerprint.ml:74
+msgid "Compute fingerprint"
+msgstr "Υπολογισμός αποτυπώματος"
+
+#: src/web/clients/tool/tool_js_fingerprint.ml:35
+msgid "Computed fingerprint:"
+msgstr "Υπολογισμένο αποτύπωμα:"
+
+#: src/web/server/common/pages_voter.ml:148
+#. src/web/server/common/pages_voter.ml:143
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+#: src/web/clients/election/home.ml:707
+msgid "Could not retrieve audit data!"
+msgstr ""
+
+#: src/web/clients/election/home.ml:175
+msgid "Credentials authority"
+msgstr ""
+
+#: src/web/clients/election/home.ml:184
+msgid "Credentials fingerprint"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:483
+#. src/web/server/common/mails_voter.ml:416
+msgid "Dear %s,"
+msgstr "Αγαπητέ/ή %s,"
+
+#: src/web/server/common/pages_common.ml:538
+#. src/web/server/common/pages_common.ml:348
+#. src/web/server/common/pages_common.ml:281
+msgid "E-mail address:"
+msgstr ""
+
+#: src/web/clients/election/home.ml:62
+msgid "Election fingerprint"
+msgstr ""
+
+#: src/web/clients/election/main.ml:36
+msgid "Election home"
+msgstr ""
+
+#: src/web/clients/election/home.ml:57
+msgid "Election identifier"
+msgstr ""
+
+#: src/web/common/pages_common.ml:141 src/web/common/pages_common.ml:132
+msgid "Election server"
+msgstr "Διακομιστής ψηφοφορίας"
+
+#: src/web/clients/election/advanced.ml:64
+msgid "Encrypted ballot in JSON format"
+msgstr ""
+
+#: src/web/clients/election/main.ml:65 src/web/server/common/site_voter.ml:111
+#. src/web/server/common/site_voter.ml:106
+#. src/web/server/common/site_voter.ml:90
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: src/web/clients/election/ballots.ml:98
+msgid "Error while loading ballots!"
+msgstr ""
+
+#: src/web/clients/tool/tool_js_fingerprint.ml:83
+msgid "Expected fingerprint:"
+msgstr "Αναμενόμενο αποτύπωμα:"
+
+#: src/web/common/pages_common.ml:259
+msgid "FAIL!"
+msgstr "ΑΠΟΤΥΧΙΑ!"
+
+#: src/web/clients/election/advanced.ml:118
+msgid "File:"
+msgstr ""
+
+#: src/web/clients/election/home.ml:212
+msgid "Fingerprint of the encrypted tally"
+msgstr ""
+
+#: src/web/server/common/site_common.ml:116
+msgid "Forbidden"
+msgstr ""
+
+#: src/web/common/pages_common.ml:65
+msgid "Get the source code"
+msgstr "Κατεβάστε τον πηγαίο κώδικα"
+
+#: src/web/clients/election/ballots.ml:50
+#. src/web/server/common/pages_voter.ml:191
+#. src/web/common/pages_common.ml:274
+msgid "Go back to election"
+msgstr "Επιστρέψτε στην ψηφοφορία"
+
+#: src/web/server/common/mails_voter.ml:160
+msgid "If the above link does not work:"
+msgstr ""
+
+#: src/web/server/common/pages_voter.ml:172
+msgid "If you want to vote, you must "
+msgstr "Εαν θέλετε να ψηφίσετε, πρέπει να "
+
+#: src/web/server/common/site_voter.ml:90
+msgid "Ill-formed ballot"
+msgstr ""
+
+#: src/web/clients/election/home.ml:417
+msgid "In our implementation, when several candidates have the same number of votes when they are ready to be elected or eliminated, we follow the order in which candidates were listed in the election."
+msgstr ""
+"Στην εκτέλεσή μας, όταν αρκετοί υποψήφιοι έχουν τον ίδιο αριθμό ψήφων όταν "
+"είναι έτοιμοι να εκλεγούν ή να αποκλειστούν, ακολουθούμε την σειρά με την "
+"οποία οι υποψήφιοι ανακοινώθηκαν στην ψηφοφορία."
+
+#: src/web/server/common/pages_voter.ml:58
+#. src/web/server/common/pages_voter.ml:53
+msgid "Input credential"
+msgstr "Εισάγετε διαπιστευτήριο"
+
+#: src/web/clients/election/home.ml:521
+msgid "It contains all submitted ballots in clear, in random order."
+msgstr ""
+
+#: src/web/clients/election/home.ml:504
+msgid "It is up to you to apply your favorite counting method."
+msgstr ""
+
+#: src/web/clients/election/home.ml:629
+msgid "It will open in "
+msgstr "Θα ανοίξει σε "
+
+#: src/web/clients/election/home.ml:518
+msgid "JSON result"
+msgstr "Αποτέλεσμα JSON"
+
+#: src/web/server/common/pages_common.ml:162 src/web/common/pages_common.ml:88
+msgid "Language:"
+msgstr "Γλώσσα:"
+
+#: src/web/clients/election/ballots.ml:92
+msgid "Loading..."
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:473
+#. src/web/server/common/pages_common.ml:404
+#. src/web/server/common/pages_common.ml:313
+#. src/web/server/common/pages_common.ml:273
+msgid "Log in"
+msgstr "Είσοδος"
+
+#: src/web/server/common/pages_common.ml:244
+msgid "Log in with %s"
+msgstr "Είσοδος με %s"
+
+#: src/web/clients/election/home.ml:428
+msgid "Look at the raw events for more details."
+msgstr "Δείτε στα μη επεξεργασμένα γεγονότα για περισσότερες πληροφορίες."
+
+#: src/web/clients/election/home.ml:412
+msgid "Many variants of STV exist, depending for example on how to break ties."
+msgstr ""
+"Υπάρχουν διάφορες παραλλαγές της STV , ανάλογα για παράδειγμα με το πώς "
+"αντιμετωπίζονται οι ισοπαλίες."
+
+#: src/web/server/common/pages_common.ml:571
+msgid "Maybe cookies are blocked."
+msgstr ""
+
+#: src/web/server/common/site_common.ml:37
+msgid "Not found"
+msgstr "Δεν βρέθηκε"
+
+#: src/web/server/common/mails_voter.ml:56
+msgid "Note that you also need a credential, sent in a separate email, to start voting."
+msgstr ""
+
+#: src/web/clients/election/home.ml:586
+msgid "Number of accepted ballots: "
+msgstr "Αριθμός αποδεκτών ψηφοδελτίων: "
+
+#: src/web/clients/election/home.ml:81
+msgid "Number of voters"
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:177
+#. src/web/server/common/mails_voter.ml:72
+msgid "Number of votes:"
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:184
+#. src/web/server/common/mails_voter.ml:83
+msgid "Only the last vote counts."
+msgstr "Μόνο η τελευταία ψήφος μετράει."
+
+#: src/web/server/common/mails_voter.ml:77
+msgid "Page of the election:"
+msgstr "Σελίδα ψηφοφορίας:"
+
+#: src/web/server/common/pages_common.ml:384
+#. src/web/server/common/mails_voter.ml:65
+msgid "Password:"
+msgstr "Κωδικός:"
+
+#: src/web/server/common/pages_common.ml:547
+msgid "Please enter "
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:462
+msgid "Please enter the verification code received by e-mail:"
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:48
+msgid "Please find below your login and password for the election"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:267
+msgid "Please log in:"
+msgstr "Παρακαλούμε κάντε είσοδο:"
+
+#: src/web/clients/tool/tool_js_fingerprint.ml:61
+msgid "Please paste the data for which you want to compute the fingerprint in the text area below:"
+msgstr ""
+"Παρακαλούμε επικολλήστε τα δεδομένα για τα οποία θέλετε να υπολογίσετε το "
+"αποτύπωμα στην κάτωθι περιοχή:"
+
+#: src/web/clients/election/advanced.ml:76
+msgid "Please paste your encrypted ballot in JSON format in the following box:"
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:146
+msgid "Please vote here using your personal link:"
+msgstr ""
+
+#: src/web/clients/election/advanced.ml:262
+msgid "Please wait while your ballot is being processed..."
+msgstr ""
+
+#: src/web/common/pages_common.ml:61
+msgid "Powered by "
+msgstr "Βασισμένο στο "
+
+#: src/web/clients/election/advanced.ml:253
+#. src/web/server/common/pages_common.ml:226
+#. src/web/server/common/pages_common.ml:218
+msgid "Proceed"
+msgstr "Προχωρήστε"
+
+#: src/web/clients/election/advanced.ml:200
+msgid "Processing ballot"
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:163
+msgid "Public page of the election:"
+msgstr ""
+
+#: src/web/clients/election/home.ml:399
+msgid "Raw events"
+msgstr "Μη επεξεργασμένα συμβάντα"
+
+#: src/web/server/common/pages_common.ml:587
+msgid "Redirection"
+msgstr ""
+
+#: src/web/common/pages_common.ml:50
+msgid "Restricted mode"
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:450
+msgid "Results will be published on the election page"
+msgstr "Τα αποτελέσματα θα αναρτηθούν στην σελίδα της ψηφοφορίας"
+
+#: src/web/server/common/pages_voter.ml:106
+#. src/web/server/common/pages_voter.ml:101
+msgid "Review and encrypt"
+msgstr "Ανασκόπηση και κρυπτογράφηση"
+
+#: src/web/clients/election/home.ml:701
+msgid "See accepted ballots"
+msgstr "Δείτε τα αποδεκτά ψηφοδέλτια"
+
+#: src/web/server/common/pages_common.ml:169
+msgid "Set"
+msgstr "Ορισμός"
+
+#: src/web/clients/election/home.ml:351
+msgid "Several techniques exist to decide which candidate to elect when there is no Condorcet winner."
+msgstr ""
+"Διάφορες τεχνικές υπάρχουν για να αποφασιστεί ποια υποψηφιότητα θα επιλεγεί "
+"όταν δεν υπάρχει νικητής Condorcet."
+
+#: src/web/clients/election/home.ml:679
+msgid "Start"
+msgstr "Έναρξη"
+
+#: src/web/server/common/pages_voter.ml:60
+msgid "Step 1"
+msgstr ""
+
+#: src/web/server/common/pages_voter.ml:84
+msgid "Step 2"
+msgstr ""
+
+#: src/web/server/common/pages_voter.ml:108
+msgid "Step 3"
+msgstr ""
+
+#: src/web/server/common/pages_voter.ml:132
+msgid "Step 4"
+msgstr ""
+
+#: src/web/server/common/pages_voter.ml:150
+msgid "Step 5"
+msgstr ""
+
+#: src/web/clients/election/advanced.ml:107
+#. src/web/clients/election/advanced.ml:69
+#. src/web/server/common/pages_common.ml:552
+#. src/web/server/common/pages_common.ml:466
+msgid "Submit"
+msgstr ""
+
+#: src/web/clients/election/advanced.ml:165
+msgid "Submit by copy/paste"
+msgstr ""
+
+#: src/web/clients/election/advanced.ml:167
+msgid "Submit by file"
+msgstr ""
+
+#: src/web/clients/election/home.ml:424
+msgid "Such candidates are marked as \"TieWin\" when they are elected and as \"TieLose\" if they have lost."
+msgstr ""
+"Οι υποψήφιοι αυτοί σημειώνονται ως \"TieWin\" όταν εκλεγούν και \"TieLose\" "
+"εαν έχουν χάσει."
+
+#: src/web/common/pages_common.ml:67
+msgid "Terms of service"
+msgstr ""
+
+#: src/web/common/pages_common.ml:252
+msgid "Thank you for voting!"
+msgstr "Σας ευχαριστούμε για την συμμετοχή σας στην ψηφοφορία!"
+
+#: src/web/clients/election/home.ml:363
+msgid "The Schulze winners are:"
+msgstr "Οι νικητές βάσει μεθόδου Schulze είναι:"
+
+#: src/web/clients/election/home.ml:433
+msgid "The Single Transferable Vote winners are:"
+msgstr "Οι νικητές βάσει μεθόδου Μοναδικής Μεταβιβάσιμης Ψήφου είναι:"
+
+#: src/web/clients/election/home.ml:652 src/web/clients/election/home.ml:650
+msgid "The election is closed and being tallied."
+msgstr "Η ψηφοφορία έχει κλείσει και διενεργείται καταμέτρηση."
+
+#: src/web/clients/election/home.ml:642
+msgid "The election will close in "
+msgstr "Η ψηφοφορία θα κλείσει σε "
+
+#: src/web/clients/tool/tool_js_fingerprint.ml:47
+msgid "The fingerprints differ!"
+msgstr "Τα αποτυπώματα διαφέρουν!"
+
+#: src/web/clients/tool/tool_js_fingerprint.ml:46
+msgid "The fingerprints match!"
+msgstr "Τα αποτυπώματα ταιριάζουν!"
+
+#: src/web/clients/election/home.ml:515
+msgid "The raw results can be viewed in the "
+msgstr "Τα ακατέργαστα αποτελέσματα μπορούν να βρεθούν στο "
+
+#: src/web/clients/election/home.ml:409
+msgid "There has been at least one tie."
+msgstr "Υπάρχει τουλάχιστον μια ισοψηφία."
+
+#: src/web/server/common/site_common.ml:38
+msgid "This election does not exist. This may happen for elections that have not yet been open or have been deleted."
+msgstr ""
+"Η ψηφοφορία δεν υπάρχει. Αυτό μπορεί να συμβεί για ψηφοφορίες που δεν έχουν "
+"ακόμα ανοίξει ή που έχουν διαγραφεί."
+
+#: src/web/clients/election/home.ml:653
+msgid "This election has been tallied."
+msgstr "Η ψηφοφορία έχει καταμετρηθεί."
+
+#: src/web/clients/election/home.ml:654
+msgid "This election is archived."
+msgstr "Η ψηφοφορία έχει αρχειοθετηθεί."
+
+#: src/web/clients/election/home.ml:635
+msgid "This election is currently closed."
+msgstr "Η ψηφοφορία είναι κλειστή αυτή την στιγμή."
+
+#: src/web/common/pages_common.ml:213
+msgid "This is a revote."
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:440
+msgid "This vote replaces any previous vote."
+msgstr "Η ψήφος αυτή αντικαθιστά προηγούμενες ψήφους."
+
+#: src/web/clients/election/home.ml:336 src/web/clients/election/home.ml:272
+msgid "Tie:"
+msgstr "Ισοπαλία:"
+
+#: src/web/server/common/mails_voter.ml:155
+msgid "To cast a vote, you will also need a password, sent in a separate email."
+msgstr ""
+"Για να ρίξετε την ψήφο σας, θα χρειαστείτε κωδικό πρόσβασης, ο οποίος σας "
+"έχει σταλεί ξεχωριστά."
+
+#: src/web/server/common/mails_voter.ml:37
+msgid "To get more information, please contact:"
+msgstr "Για περισσότερες πληροφορίες, παρακαλούμε επικοινωνήστε με:"
+
+#: src/web/clients/election/home.ml:570
+msgid "Total weight of accepted ballots:"
+msgstr "Συνολική βαρύτητα αποδεκτών ψήφων:"
+
+#: src/web/clients/election/home.ml:199
+msgid "Trustees shuffled the ballots in the following order:"
+msgstr "Η επιτροπή ανακάτεψε τα ψηφοδέλτια με την εξής σειρά:"
+
+#: src/web/server/common/site_voter.ml:110
+msgid "Unknown election"
+msgstr ""
+
+#: src/web/clients/election/home.ml:557
+msgid "Unsupported question type"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:490
+msgid "Use the following code:"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:347
+#. src/web/server/common/pages_common.ml:280
+#. src/web/server/common/mails_voter.ml:167
+#. src/web/server/common/mails_voter.ml:61
+msgid "Username:"
+msgstr "Όνομα χρήστη:"
+
+#: src/web/clients/election/home.ml:86
+msgid "Voter list fingerprint"
+msgstr ""
+
+#: src/web/clients/election/home.ml:97
+msgid "Voters' total weight"
+msgstr ""
+
+#: src/web/server/common/pages_voter.ml:183
+msgid "Warning:"
+msgstr "Προειδοποίηση:"
+
+#: src/web/server/common/pages_common.ml:498
+msgid "Warning: this code is valid for 15 minutes, and previous codes sent to this address are no longer valid."
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:134
+msgid "Warning: this e-mail contains personal and confidential material and should not be transmitted."
+msgstr ""
+
+#: src/web/clients/election/home.ml:355
+msgid "We use here the Schulze method and we refer voters to "
+msgstr ""
+"Εδώ χρησιμοποιούμε την μέθοδο Schulze και παραπέμπουμε τους ψηφοφόρους στο "
+
+#: src/web/server/common/pages_common.ml:186 src/web/common/pages_common.ml:106
+msgid "Wish to help with translations?"
+msgstr "Θέλετε να βοηθήσετε με τις μεταφράσεις;"
+
+#: src/web/clients/election/advanced.ml:244
+msgid "You are about to submit a ballot with smart ballot tracker %s."
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:183
+#. src/web/server/common/mails_voter.ml:82
+msgid "You are allowed to vote several times."
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:139
+msgid "You are listed as a voter for the election"
+msgstr "Είστε δηλωμένος ώς ψηφοφόρος για αυτή την ψηφοφορία"
+
+#: src/web/server/common/site_common.ml:115
+msgid "You are not allowed to access this page!"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:431
+msgid "You can "
+msgstr "Μπορείτε να "
+
+#: src/web/server/common/pages_common.ml:335
+msgid "You can also "
+msgstr "Μπορείτε επίσης να "
+
+#: src/web/clients/election/home.ml:591
+msgid "You can also download the "
+msgstr "Μπορείτε επίσης να κατεβάσετε το "
+
+#: src/web/common/pages_common.ml:245
+msgid "You can check its presence in the "
+msgstr "Μπορείτε να ελέγξετε την ύπαρξή του στην "
+
+#: src/web/server/common/mails_voter.ml:444
+msgid "You can check its presence in the ballot box, accessible at"
+msgstr "Μπορείτε να ελέγξετε την ύπαρξή του στην κάλπη, προσβάσιμη στο"
+
+#: src/web/clients/election/advanced.ml:141
+msgid "You can create an encrypted ballot by using the command-line tool "
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:562
+msgid "You cannot log in now. Please try later."
+msgstr ""
+
+#: src/web/common/pages_common.ml:264
+msgid "Your ballot for "
+msgstr "To ψηφοδέλτιό σας για το "
+
+#: src/web/server/common/site_voter.ml:103
+msgid "Your ballot is rejected because %s."
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:201
+msgid "Your credential for election %s"
+msgstr "Το διαπιστευτήριό σας για την ψηφοφορία %s"
+
+#: src/web/server/common/mails_voter.ml:171
+msgid "Your credential:"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:487
+msgid "Your e-mail address has been used to authenticate with our Belenios server."
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:102
+msgid "Your password for election %s"
+msgstr "Ο κωδικός σας για την ψηφοφορία %s"
+
+#: src/web/server/common/mails_voter.ml:432
+msgid "Your smart ballot tracker is"
+msgstr "Ο κωδικός ανίχνευσης του ψηφοδελτίου σας είναι"
+
+#: src/web/common/pages_common.ml:242
+msgid "Your smart ballot tracker is "
+msgstr "Ο κωδικός ανίχνευσης του ψηφοδελτίου σας είναι "
+
+#: src/web/server/common/mails_voter.ml:419
+msgid "Your vote for election"
+msgstr "Η ψήφος σας για την ψηφοφορία"
+
+#: src/web/server/common/site_voter.ml:139
+msgid "Your vote for election %s"
+msgstr "Η ψήφος σας για την ψηφοφορία %s"
+
+#: src/web/server/common/pages_voter.ml:185
+msgid "Your vote was not recorded!"
+msgstr "Η ψήφος σας δεν καταγράφηκε!"
+
+#: src/web/server/common/mails_voter.ml:430 src/web/common/pages_common.ml:222
+msgid "Your weight is %s."
+msgstr ""
+
+#: src/web/common/pages_common.ml:233
+msgid "ballot box"
+msgstr "κάλπη"
+
+#: src/web/server/common/pages_common.ml:339
+msgid "change your password"
+msgstr "αλλάξτε των κωδικό σας"
+
+#: src/web/server/common/pages_common.ml:336
+msgid "create an account"
+msgstr "δημιουργήσετε έναν λογαριασμό"
+
+#: src/web/clients/election/advanced.ml:128
+msgid "direct link"
+msgstr ""
+
+#: src/web/server/common/mails_voter.ml:426
+msgid "has been recorded."
+msgstr "έχει καταγραφεί."
+
+#: src/web/clients/election/common.ml:54
+msgid "parameters"
+msgstr "παράμετροι"
+
+#: src/web/clients/election/common.ml:56
+msgid "public data"
+msgstr ""
+
+#: src/web/clients/election/home.ml:592
+msgid "raw result"
+msgstr ""
+
+#: src/web/common/confirmation.ml:30
+msgid "some proofs failed verification"
+msgstr "κάποιες αποδείξεις απέτυχαν στην επιβεβαίωση"
+
+#: src/web/clients/election/advanced.ml:145
+msgid "sources"
+msgstr ""
+
+#: src/web/server/common/pages_voter.ml:174
+msgid "start from the beginning"
+msgstr "ξεκινήστε από την αρχή"
+
+#: src/web/clients/common/secondary_ui.ml:94
+msgid "terms of service"
+msgstr ""
+
+#: src/web/clients/election/home.ml:357
+msgid "the Wikipedia page"
+msgstr "η σελίδα της Wikipedia"
+
+#: src/web/common/confirmation.ml:25
+msgid "the election is closed"
+msgstr "η ψηφοφορία έχει ολοκληρωθεί"
+
+#: src/web/common/confirmation.ml:39
+msgid "the server responded unexpectedly"
+msgstr ""
+
+#: src/web/common/confirmation.ml:36
+msgid "this ballot has already been accepted"
+msgstr ""
+
+#: src/web/common/confirmation.ml:37
+msgid "this ballot has expired"
+msgstr ""
+
+#: src/web/server/common/pages_common.ml:432
+msgid "try to log in again"
+msgstr "Δοκιμάστε να συνδεθείτε ξανά"
+
+#: src/web/common/confirmation.ml:32
+msgid "you are not allowed to revote"
+msgstr "Δεν επιτρέπεται να ψηφίσετε ξανά"
+
+#: src/web/common/confirmation.ml:26
+msgid "you are not allowed to vote"
+msgstr "Δεν επιτρέπεται να ψηφίσετε"
+
+#: src/web/common/confirmation.ml:34
+msgid "you are not allowed to vote with this credential"
+msgstr "δεν επιτρέπεται να ψηφίσετε με αυτό το διαπιστευτήριο"
+
+#: src/web/common/confirmation.ml:28
+msgid "your ballot has a syntax error (%s)"
+msgstr "το ψηφοδέλτιό σας έχει ένα συντακτικό λάθος (%s)"
+
+#: src/web/common/confirmation.ml:29
+msgid "your ballot is not in canonical form"
+msgstr ""
+
+#: src/web/common/confirmation.ml:35
+msgid "your credential has a bad weight"
+msgstr "το διαπιστευτήριό σας έχει λανθασμένη βαρύτητα"
+
+#: src/web/common/confirmation.ml:33
+msgid "your credential has already been used"
+msgstr "το διαπιστευτήριό σας έχει ήδη χρησιμοποιηθεί"
+
+#: src/web/common/confirmation.ml:31
+msgid "your credential is invalid"
+msgstr "το διαπιστευτήριό σας είναι λανθασμένο"
+
+#: src/web/common/confirmation.ml:38
+msgid "your username is wrong"
+msgstr ""
+

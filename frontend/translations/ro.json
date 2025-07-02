@@ -1,0 +1,14 @@
+{
+    "alert_invalid_credential": "Cod de votare invalid !",
+    "progress_input_credential": "Introducere cod de votare",
+    "progress_answer_to_questions": "Răspuns la întrebări",
+    "progress_review_and_encrypt": "Rezumat și criptare",
+    "progress_authenticate": "Autentificare",
+    "progress_confirm": "Confirmati",
+    "blank_vote": "Vot alb",
+    "ask_for_credential": "Vă rugăm să introduceți codul de votare:",
+    "next_button_label": "Următor",
+    "election_server": "Serverul alegerii",
+    "ask_to_wait_during_ballot_encryption": "Vă rugăm să așteptați criptarea buletinului vostru de vot…",
+    "previous_button_label": "Precedent"
+}
