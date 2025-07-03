@@ -1,3 +1,5 @@
+This is a modified version of the original [Belenios](https://github.com/glondu/belenios).
+
 Belenios
 ========
 
